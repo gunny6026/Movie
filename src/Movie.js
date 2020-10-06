@@ -1,26 +1,32 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import styled from "styled-components";
 
 const Movie = () => {
-  const header = styled.div`
-    display: grid;
-    grid-template-columns: auto auto;
-    background-color: green;
+  const registerPage = styled.div`
+    margin: 0;
+    padding: 0;
   `;
+
   return (
-    <div>
-      <header>
-        <div>영화목록</div>
-        <div>영화등록</div>
-      </header>
+    <registerPage>
       <div>
-        <div>제목</div>
-        <div>평점</div>
-        <div>줄거리</div>
-        <div>사진</div>
+        <div>
+          <Link to="/moviedetail">영화 등록</Link>
+        </div>
+        <div>
+          <Link to="/movielist">영화 목록</Link>
+        </div>
       </div>
-      <button>등록</button>
-    </div>
+      <form>
+        <input type="text" placeholder="제목" />
+        <input type="text" placeholder="평점" />
+        <input type="text" placeholder="줄거리" />
+        <input type="text" placeholder="사진" />
+        <button>등록</button>
+      </form>
+    </registerPage>
   );
 };
 
