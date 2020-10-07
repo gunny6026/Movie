@@ -12,7 +12,7 @@ function App() {
     <div>
       <Route path="/" exact={true} component={Movie} />
       <Route path="/movielist" exact={true} component={MovieList} />
-      <Route path="/moviedetail" exact={true} component={MovieDetail} />
+      <Route path="/moviedetail/:id" exact={true} component={MovieDetail} />
     </div>
   );
 }
